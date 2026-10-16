@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get Dandrey</title><meta name="description" content="Download Dandrey from the App Store."><link rel="stylesheet" href="../style.css"></head>
+<body><main><nav><a href=".././">Support</a><a href="../privacy.html">Privacy Policy</a><a href="../download/">Download</a></nav>
+<h1>Get Dandrey</h1>
+<p class="muted" id="msg">Taking you to the App Store…</p>
+<a class="btn" id="go" href="#">Open the App Store</a>
+<script>
+// Set this to the app's Apple ID (the number in App Store Connect → App Information)
+// once the app is live. The in-app share button links here, so this is the only
+// place that needs to change.
+const APP_STORE_ID = "";
+const go = document.getElementById("go");
+if (APP_STORE_ID) {
+  const url = "https://apps.apple.com/app/id" + APP_STORE_ID;
+  go.href = url;
+  location.replace(url);
+} else {
+  document.getElementById("msg").textContent = "Dandrey is coming to the App Store soon.";
+  go.href = "../";
+  go.textContent = "Learn more";
+}
+</script>
+<footer>© 2026 Itay Bickson · <a href="mailto:itay.bickson1@gmail.com">itay.bickson1@gmail.com</a></footer></main></body></html>
